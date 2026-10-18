@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NextDorm — Share, Borrow, Circulate | CircleSpaces</title>
+<meta name="description" content="NextDorm is a goods circulation platform making it effortless to give and receive second-hand items on Brown University's campus — launching soon.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/brand/logo-icon.svg">
+<link rel="stylesheet" href="/css/styles.css">
+<link rel="stylesheet" href="/css/nextdorm-flowers.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <nav class="nav container" aria-label="Primary">
+    <a href="/" class="nav-brand">
+      <img class="brand-mark" src="/assets/brand/logo-icon.svg" alt="" width="38" height="38">
+      CircleSpaces
+    </a>
+
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/nextdorm/" aria-current="page">NextDorm</a>
+      <a href="/surplus/">Surplus <span class="nav-badge">Soon</span></a>
+      <a href="/about/">About Us</a>
+    </div>
+
+    <div class="nav-actions">
+      <div class="search-wrap">
+        <button class="icon-btn" data-search-toggle aria-haspopup="true" aria-label="Search the site">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"/><path d="M21 21L17 17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+        <div class="search-panel" data-search-panel data-open="false" role="dialog" aria-label="Site search">
+          <label class="visually-hidden" for="search-input">Search CircleSpaces</label>
+          <input type="search" id="search-input" placeholder="Search pages, mission, projects…">
+          <ul class="search-results" data-search-results></ul>
+        </div>
+      </div>
+      <a href="#launch" class="btn btn-primary btn-sm nav-cta">Launch App</a>
+      <button class="icon-btn nav-toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6H21M3 12H21M3 18H21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" data-mobile-menu data-open="false">
+  <div class="mobile-menu-top">
+    <button class="icon-btn" data-mobile-close aria-label="Close menu">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6L18 18M6 18L18 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <nav aria-label="Mobile">
+    <a href="/">Home</a>
+    <a href="/nextdorm/">NextDorm</a>
+    <a href="/surplus/">Surplus <span class="nav-badge">Soon</span></a>
+    <a href="/about/">About Us</a>
+  </nav>
+  <a href="#launch" class="btn btn-primary">Launch App</a>
+</div>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="section-pad" style="padding-top:56px;overflow:hidden;">
+    <div class="container" style="position:relative;">
+      <div class="blob" style="width:480px;height:480px;background:var(--yellow);top:-160px;right:-160px;opacity:0.14;"></div>
+
+      <div style="position:relative;z-index:1;display:grid;grid-template-columns:1.1fr 0.9fr;gap:40px;align-items:center;">
+        <div class="reveal is-visible">
+          <img src="/assets/images/Logo-NextDorm.png" alt="NextDorm logo" style="width:68px;height:68px;border-radius:16px;margin-bottom:22px;">
+          <span class="eyebrow">Launching soon at Brown University</span>
+          <h1 style="margin-top:18px;font-size:clamp(2.3rem,5.5vw,3.6rem);">Your dorm's sharing economy, finally has an app.</h1>
+          <p style="margin-top:20px;font-size:1.15rem;color:var(--ink-soft);max-width:520px;">
+            NextDorm is a goods circulation platform that makes it effortless to give and receive second-hand items on campus — so good stuff never ends up in a landfill.
+          </p>
+          <div style="margin-top:30px;display:flex;gap:14px;flex-wrap:wrap;align-items:center;">
+            <button class="btn btn-primary btn-lg" data-open-modal="nextdorm">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Launch App
+            </button>
+            <span style="font-size:0.88rem;color:var(--ink-soft);">Joins the waitlist — app launching soon</span>
+          </div>
+        </div>
+        <div class="reveal is-visible" style="text-align:center;">
+          <img src="/assets/images/NextDorm-Banner.png" alt="NextDorm wordmark banner in brand colors" style="max-width:100%;border-radius:20px;">
+          <img src="/assets/images/Character-Fanboy-transparent.png" alt="Fanboy, the NextDorm mascot, waving cheerfully" style="width:68%;margin:-10px auto 0;animation:float 5s ease-in-out infinite;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FLOWERS ============ -->
+  <section class="nd-flowers" id="flowers" aria-labelledby="flowers-title" data-flowers-section>
+    <div class="nd-flowers-inner">
+      <div class="nd-flowers-text reveal">
+        <span class="nd-flowers-eyebrow">Flowers · NextDorm's social currency</span>
+        <h2 id="flowers-title" class="nd-flowers-title">Everyone deserves their flowers</h2>
+        <p class="nd-flowers-lede">On NextDorm, no good deed goes unrewarded. Once a user claims an item they can show their gratitude to their neighbor by giving them flowers. "Flowers" are NextDorm's social currency system and they determine your rank and dorm's overall standing. The more you give the bigger your bouquet grows and so too does your standing on the leaderboard.</p>
+      </div>
+
+      <div class="nd-boards reveal" data-flowers-boards>
+        <div class="nd-board-wrap" data-flowers-wrap="people">
+          <div class="nd-board nd-board--givers" data-flowers-board="people">
+            <div class="nd-board-head">
+              <div class="nd-board-head-title">
+                <span class="nd-board-name">Top Givers</span>
+                <span class="nd-board-sub">Individual · Brown University</span>
+              </div>
+              <div class="nd-podium" data-flowers-podium></div>
+            </div>
+            <div class="nd-board-body">
+              <div class="nd-tabs">
+                <span>All time</span><span class="is-active">This week</span><span>Friends</span>
+              </div>
+              <div class="nd-rows" data-flowers-rows></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="nd-board-wrap nd-board-wrap--dorms" data-flowers-wrap="dorms" data-flowers-stagger>
+          <div class="nd-board nd-board--dorms" data-flowers-board="dorms">
+            <div class="nd-board-head">
+              <div class="nd-board-head-title">
+                <span class="nd-board-name">Top Dorms</span>
+                <span class="nd-board-sub">Most flowers · Brown University</span>
+              </div>
+              <div class="nd-podium" data-flowers-podium></div>
+            </div>
+            <div class="nd-board-body">
+              <div class="nd-tabs">
+                <span>All time</span><span class="is-active">This week</span><span>This month</span>
+              </div>
+              <div class="nd-rows" data-flowers-rows></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nd-bouquet reveal" aria-hidden="true">
+        <img class="nd-bouquet-img nd-bouquet-blue" src="/assets/nextdorm-flowers/flower-blue.png" alt="">
+        <img class="nd-bouquet-img nd-bouquet-pink" src="/assets/nextdorm-flowers/flower-pink.png" alt="">
+        <img class="nd-bouquet-img nd-bouquet-red" src="/assets/nextdorm-flowers/bouquet.png" alt="">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DESCRIPTION ============ -->
+  <section class="section-pad" style="background:var(--mist-soft);">
+    <div class="container">
+      <div class="two-col">
+        <img class="reveal" src="/assets/images/collage-dorm-vertical.jpg" alt="A cozy lofted dorm bed with a decorated gallery wall, fairy lights, and a desk setup below" loading="lazy">
+        <div class="reveal">
+          <span class="eyebrow">What is NextDorm?</span>
+          <h2 style="margin-top:16px;font-size:clamp(1.8rem,3.5vw,2.4rem);">Sharing-economy circulation, built for campus life.</h2>
+          <p style="margin-top:18px;color:var(--ink-soft);font-size:1.05rem;">
+            Every move-in and move-out, Brown students buy things they'll use for a semester and then toss, donate off-campus, or leave on the curb. NextDorm turns that churn into a closed loop: list what you don't need, find what you do, and circulate it all within a verified campus community.
+          </p>
+          <p style="margin-top:14px;color:var(--ink-soft);font-size:1.05rem;">
+            No app store required — NextDorm installs straight from your browser, so it's always one tap away.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURES ============ -->
+  <section class="section-pad" id="features">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Features</span>
+        <h2>Everything you need to circulate, nothing you don't</h2>
+      </div>
+      <div class="feature-grid reveal-stagger">
+        <div class="card feature-card">
+          <div class="pillar-icon" style="background:var(--mist);color:var(--green-dark);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7L12 3L20 7V17L12 21L4 17V7Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M4 7L12 11L20 7" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M12 11V21" stroke="currentColor" stroke-width="1.8"/></svg>
+          </div>
+          <div>
+            <h3>List &amp; borrow in seconds</h3>
+            <p>Snap a photo, set your terms, and your item's visible to every verified student on campus.</p>
+          </div>
+        </div>
+        <div class="card feature-card">
+          <div class="pillar-icon" style="background:#E6EFEC;color:var(--yellow-dark);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 12H7L9 7L15 17L17 12H21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <h3>Zero-waste move-out</h3>
+            <p>Move-out week becomes a giveaway, not a dumpster run — list a whole room in minutes.</p>
+          </div>
+        </div>
+        <div class="card feature-card">
+          <div class="pillar-icon" style="background:#E3EEE8;color:var(--green-dark);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 12L11 14L15.5 9.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 3L4 6.5V11.5C4 16.5 7.5 19.9 12 21C16.5 19.9 20 16.5 20 11.5V6.5L12 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <h3>Verified Brown community</h3>
+            <p>Every account is tied to a Brown identity, so you always know who you're circulating with.</p>
+          </div>
+        </div>
+        <div class="card feature-card">
+          <div class="pillar-icon" style="background:#F0DEDC;color:var(--maroon);">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 15C21 16.1 20.1 17 19 17H8L4 21V6C4 4.9 4.9 4 6 4H19C20.1 4 21 4.9 21 6V15Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          </div>
+          <div>
+            <h3>Real-time chat</h3>
+            <p>Coordinate pickup times and details without ever leaving the app.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS ============ -->
+  <section class="section-pad" id="how-it-works" style="background:var(--mist-soft);">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">How it works</span>
+        <h2>Three steps to circulation</h2>
+      </div>
+      <div class="path reveal-stagger">
+        <div class="path-step">
+          <div class="path-num">1</div>
+          <h3>List it</h3>
+          <p>Snap a photo of what you're giving up, lending, or looking for.</p>
+        </div>
+        <div class="path-step">
+          <div class="path-num">2</div>
+          <h3>Match it</h3>
+          <p>NextDorm connects you with a verified student nearby in minutes.</p>
+        </div>
+        <div class="path-step">
+          <div class="path-num">3</div>
+          <h3>Circulate it</h3>
+          <p>Meet up, hand it off, and keep one more thing out of the landfill.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BIG LAUNCH CTA ============ -->
+  <section class="section-pad" id="launch">
+    <div class="container">
+      <div class="flagship reveal" style="background:var(--green);">
+        <div class="flagship-copy">
+          <span class="eyebrow">Available soon</span>
+          <h3>Be the first to circulate.</h3>
+          <p>NextDorm is putting the finishing touches on launch at Brown. Join the waitlist and we'll let you know the second it's live.</p>
+          <div>
+            <button class="btn btn-primary btn-lg" data-open-modal="nextdorm">Launch App</button>
+          </div>
+        </div>
+        <div class="flagship-visual" style="background:var(--mist);">
+          <img class="mascot" src="/assets/images/Logo-NextDorm.png" alt="NextDorm app icon" style="width:40%;max-width:160px;border-radius:24px;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <img src="/assets/brand/logo-icon.svg" alt="" width="32" height="32">
+          CircleSpaces
+        </div>
+        <p class="footer-tagline">Sustainable, regenerative redistribution of goods, services, and wealth.</p>
+        <div class="footer-social" style="margin-top:20px;">
+          <a href="#" aria-label="CircleSpaces on Instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor"/></svg></a>
+          <a href="mailto:kairo@circlespacespbc.com" aria-label="Email CircleSpaces"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" stroke-width="1.8"/><path d="M4 7L12 13L20 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Projects</h4>
+        <ul>
+          <li><a href="/nextdorm/">NextDorm</a></li>
+          <li><a href="/surplus/">Surplus (soon)</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/about/#mission">Our mission</a></li>
+          <li><a href="/about/#pbc">Why a PBC?</a></li>
+          <li><a href="/about/#team">Meet the team</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:kairo@circlespacespbc.com">kairo@circlespacespbc.com</a></li>
+          <li><a href="tel:+14017156967">(401) 715-6967</a></li>
+          <li>700 Narragansett Park Dr<br>Ste 100<br>Pawtucket, RI 02861</li>
+          <li><a href="/#join">Join our newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 CircleSpaces, PBC. Built with care at Brown University.</span>
+      <span>Sustainability · Equity · Community</span>
+    </div>
+  </div>
+</footer>
+
+<div class="modal-overlay" data-waitlist-modal data-open="false" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-box">
+    <button class="icon-btn modal-close" data-close-modal aria-label="Close dialog">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6L18 18M6 18L18 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+    <h3 id="modal-title" data-modal-title>Be first in line for NextDorm</h3>
+    <p data-modal-body>NextDorm is launching soon on Brown's campus. Leave your email and we'll notify you the moment the app goes live.</p>
+    <form class="modal-form" name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="waitlist">
+      <input type="hidden" name="source" value="nextdorm-modal">
+      <p class="visually-hidden"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
+      <div>
+        <label for="modal-email">Email address</label>
+        <input type="email" id="modal-email" name="email" placeholder="you@brown.edu" required>
+      </div>
+      <button type="submit" class="btn btn-primary" style="margin-top:4px;">Notify me</button>
+    </form>
+    <p class="modal-error" data-modal-error>Something went wrong — please try again, or email us directly.</p>
+    <div class="modal-success" data-modal-success>
+      <div class="pillar-icon" style="background:var(--mist);color:var(--green-dark);">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 13L9.5 17.5L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h3>You're on the list!</h3>
+      <p>We'll email you the moment it's ready.</p>
+    </div>
+  </div>
+</div>
+
+<script src="/js/main.js"></script>
+<script src="/js/flowers-data.js"></script>
+<script src="/js/nextdorm-flowers.js"></script>
+</body>
+</html>

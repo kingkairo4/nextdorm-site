@@ -1,0 +1,24 @@
+:root {
+  /* Colors — sampled from the NextDorm palette */
+  --cs-blue: #DAE8E3;      /* Commons Blue: primary light ground / mark on dark */
+  --cs-brick: #7A542E;     /* Brown: primary dark ground / mark on light, headings, links */
+  --cs-brick-deep: #543820;/* hover/pressed for Brown */
+  --cs-ink: #2B1316;       /* body text, footer ground */
+  --cs-ink-muted: #5A4346; /* secondary text */
+  --cs-paper: #F4F2ED;     /* page background */
+  --cs-surface: #FFFFFF;   /* cards */
+  --cs-line: #E4E0D8;      /* 1px card borders */
+
+  /* Type */
+  --cs-font-sans: "Jost", system-ui, sans-serif;            /* Google Fonts, weights 400–800 */
+  --cs-font-mono: "IBM Plex Mono", ui-monospace, monospace; /* labels, 11–13px, uppercase, .08em tracking */
+
+  /* Radii */
+  --cs-radius-sm: 8px;
+  --cs-radius-md: 14px;
+  --cs-radius-lg: 18px;
+  --cs-radius-pill: 999px;
+
+  /* Shadow */
+  --cs-shadow-card: 0 20px 50px -30px rgba(43,19,22,.35);
+}

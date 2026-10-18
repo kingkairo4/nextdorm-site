@@ -1,0 +1,114 @@
+/* NextDorm "Flowers" section — social-currency leaderboards */
+.nd-flowers{background:#FBF8F1;color:#7B2A31;padding:clamp(48px,7vw,112px) clamp(18px,5vw,72px);overflow:hidden;font-family:Jost,system-ui,sans-serif}
+.nd-flowers *{box-sizing:border-box}
+.nd-flowers-inner{
+  max-width:1280px;margin:0 auto;display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  grid-template-areas:"text boards" "bouquet boards";
+  gap:clamp(40px,5vw,72px);align-items:start
+}
+/* Below ~860px there's no room for the bouquet and the leaderboards side by
+   side — stack them, leaderboard above bouquet, per design direction. */
+@media (max-width:860px){
+  .nd-flowers-inner{grid-template-columns:1fr;grid-template-areas:"text" "boards" "bouquet"}
+  .nd-boards{padding-top:0}
+}
+
+/* ---------- Left column — copy + bouquet trio ---------- */
+.nd-flowers-text{grid-area:text;display:flex;flex-direction:column;gap:24px;max-width:500px}
+.nd-flowers-eyebrow{font-family:"IBM Plex Mono",monospace;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#785028}
+.nd-flowers-title{margin:0;font-size:clamp(40px,5.4vw,72px);line-height:.95;font-weight:700;letter-spacing:-.03em;text-wrap:balance}
+.nd-flowers-lede{margin:0;font-size:clamp(17px,1.6vw,20px);line-height:1.55;color:#2B1316;text-wrap:pretty}
+
+.nd-bouquet{grid-area:bouquet;position:relative;width:100%;max-width:480px;aspect-ratio:1.25;margin:4px auto 0}
+.nd-bouquet-img{position:absolute;bottom:4%;width:50%;height:auto;scale:1;animation-iteration-count:infinite;animation-timing-function:ease-in-out}
+.nd-bouquet-blue{left:0;transform:rotate(-12deg);filter:drop-shadow(0 18px 24px rgba(43,19,22,.22));z-index:1;animation-name:fl-pulse;animation-duration:3.4s;animation-delay:-0.6s}
+.nd-bouquet-pink{right:0;transform:rotate(12deg);filter:drop-shadow(0 18px 24px rgba(43,19,22,.22));z-index:1;animation-name:fl-pulse;animation-duration:4.1s;animation-delay:-2.1s}
+.nd-bouquet-red{left:50%;top:0;bottom:auto;width:60%;transform:translateX(-50%);filter:drop-shadow(0 24px 30px rgba(43,19,22,.3));z-index:2;animation-name:fl-pulse;animation-duration:2.9s;animation-delay:-1.3s}
+@keyframes fl-pulse{0%,100%{scale:1}50%{scale:1.06}}
+@media (prefers-reduced-motion:reduce){
+  .nd-bouquet-img{animation:none;scale:1}
+}
+
+/* ---------- Right column — leaderboards ---------- */
+.nd-boards{grid-area:boards;display:flex;flex-wrap:nowrap;justify-content:center;gap:24px;align-items:flex-start;min-width:0;width:100%;padding-top:44px}
+.nd-board-wrap{flex-shrink:0;overflow:hidden}
+.nd-board-wrap--dorms{transform-origin:top left}
+.nd-board{width:340px;flex-shrink:0;background:#FFFFFF;border-radius:28px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(43,19,22,.45);display:flex;flex-direction:column;transform-origin:top left}
+
+/* Board header */
+.nd-board-head{padding:20px 16px 0;display:flex;flex-direction:column;gap:6px}
+.nd-board--givers .nd-board-head{background:linear-gradient(180deg,#84A974 0%,#9DBB8E 100%)}
+.nd-board--dorms .nd-board-head{background:linear-gradient(180deg,#7B2A31 0%,#94434A 100%)}
+.nd-board-head-title{display:flex;flex-direction:column;align-items:center;gap:2px}
+.nd-board--givers .nd-board-head-title{color:#FFFFFF}
+.nd-board--dorms .nd-board-head-title{color:#FBF8F1}
+.nd-board-name{font-size:22px;font-weight:700;letter-spacing:-.02em}
+.nd-board-sub{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.9}
+
+/* Podium */
+.nd-podium{display:grid;grid-template-columns:1fr 1.15fr 1fr;align-items:end;margin-top:12px}
+.nd-podium-step{display:flex;flex-direction:column;align-items:center}
+.nd-podium-avatar-wrap{position:relative;display:flex;flex-direction:column;align-items:center;margin-bottom:-18px;z-index:1}
+.nd-podium-crown{font-size:22px;line-height:1;color:#F0B040;margin-bottom:2px}
+.nd-podium-avatar{color:#FBF8F1;display:grid;place-items:center;font-weight:700;border:3px solid;border-radius:50%}
+.nd-board--dorms .nd-podium-avatar{border-radius:30%}
+.nd-podium-badge{position:absolute;bottom:-8px;width:20px;height:20px;border-radius:50%;color:#2B1316;display:grid;place-items:center;font-size:11px;font-weight:700;border:2px solid #FFFFFF}
+.nd-podium-card{width:100%;border-radius:16px 16px 0 0;padding:26px 6px 10px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:4px;text-align:center}
+.nd-podium-name{font-size:14px;font-weight:600;color:#FFFFFF;line-height:1.1}
+.nd-podium-chip{position:relative;width:96%;margin-top:4px;background:#FFFDF8;border-radius:10px;overflow:hidden;padding:7px 8px;border:1px solid #EDE6D6;box-shadow:0 4px 10px -6px rgba(43,19,22,.4)}
+.nd-podium-chip span{font-weight:700;color:#7B2A31;line-height:1.1}
+.nd-podium-count{font-size:17px;font-weight:700;margin-top:2px}
+.nd-podium-icon{display:block;background-size:contain;background-repeat:no-repeat;background-position:center}
+
+.nd-podium-step.is-rank-1 .nd-podium-avatar{width:72px;height:72px;font-size:18px;border-color:#F0B040}
+.nd-podium-step.is-rank-2 .nd-podium-avatar{width:58px;height:58px;font-size:17px;border-color:#DAE8E3}
+.nd-podium-step.is-rank-3 .nd-podium-avatar{width:54px;height:54px;font-size:17px;border-color:#E8B98A}
+.nd-podium-step.is-rank-1 .nd-podium-badge{background:#F0B040}
+.nd-podium-step.is-rank-2 .nd-podium-badge{background:#DAE8E3}
+.nd-podium-step.is-rank-3 .nd-podium-badge{background:#E8B98A}
+.nd-podium-step.is-rank-1 .nd-podium-card{min-height:232px}
+.nd-podium-step.is-rank-2 .nd-podium-card{min-height:196px}
+.nd-podium-step.is-rank-3 .nd-podium-card{min-height:182px}
+.nd-podium-step.is-rank-1 .nd-podium-chip span{font-size:16px}
+.nd-podium-step.is-rank-2 .nd-podium-chip span,
+.nd-podium-step.is-rank-3 .nd-podium-chip span{font-size:11px}
+.nd-podium-step.is-rank-1 .nd-podium-count{color:#F0B040}
+.nd-podium-step.is-rank-2 .nd-podium-count{color:#DAE8E3}
+.nd-podium-step.is-rank-3 .nd-podium-count{color:#E8B98A}
+.nd-podium-step.is-rank-1 .nd-podium-icon{width:72px;height:72px}
+.nd-podium-step.is-rank-2 .nd-podium-icon,
+.nd-podium-step.is-rank-3 .nd-podium-icon{width:48px;height:48px}
+
+.nd-board--givers .nd-podium-step.is-rank-1 .nd-podium-card{background:#5F8752}
+.nd-board--givers .nd-podium-step.is-rank-2 .nd-podium-card,
+.nd-board--givers .nd-podium-step.is-rank-3 .nd-podium-card{background:#6E9561}
+.nd-board--dorms .nd-podium-step.is-rank-1 .nd-podium-card{background:#5E1F25}
+.nd-board--dorms .nd-podium-step.is-rank-2 .nd-podium-card,
+.nd-board--dorms .nd-podium-step.is-rank-3 .nd-podium-card{background:#6B2A30}
+
+/* Board body */
+.nd-board-body{padding:14px 14px 0;display:flex;flex-direction:column}
+.nd-tabs{display:grid;grid-template-columns:1fr 1fr 1fr;border-radius:12px;padding:4px;font-size:13px;font-weight:600;text-align:center}
+.nd-board--givers .nd-tabs{background:#5F8752;color:#E8F0E2}
+.nd-board--dorms .nd-tabs{background:#5E1F25;color:#EBD3D5}
+.nd-tabs span{padding:7px 0}
+.nd-board--givers .nd-tabs span.is-active{background:#84A974;color:#FFFFFF;border-radius:9px}
+.nd-board--dorms .nd-tabs span.is-active{background:#7B2A31;color:#FFFFFF;border-radius:9px}
+
+.nd-rows{display:flex;flex-direction:column}
+.nd-row{display:grid;grid-template-columns:26px 40px minmax(0,1fr) auto;gap:10px;align-items:center;padding:10px 2px;border-bottom:1px solid #EFE8D8}
+.nd-row-rank{width:24px;height:24px;border-radius:50%;background:#F0B040;color:#785028;display:grid;place-items:center;font-size:11px;font-weight:700}
+.nd-row-avatar{width:40px;height:40px;border-radius:12px;color:#FBF8F1;display:grid;place-items:center;font-weight:700;font-size:14px}
+.nd-board--dorms .nd-row-avatar{font-size:13px}
+.nd-row-info{display:flex;flex-direction:column;gap:3px;min-width:0}
+.nd-row-name{font-size:15px;font-weight:600;color:#2B1316}
+.nd-row-line{display:flex;align-items:center}
+.nd-row-chip{position:relative;display:inline-flex;align-items:center;background:#FFFDF8;border:1px solid #EDE6D6;border-radius:6px;padding:3px 10px;overflow:hidden;font-size:10px;font-weight:700;color:#7B2A31;white-space:nowrap}
+.nd-board--dorms .nd-row-chip{font-size:13px;font-weight:600;color:#2B1316}
+.nd-row-icon{display:block;width:28px;height:28px;margin-left:-6px;position:relative;z-index:1;background-size:contain;background-repeat:no-repeat;background-position:center}
+.nd-row-counts{display:flex;flex-direction:column;align-items:flex-end;gap:0}
+.nd-row-count{font-size:15px;font-weight:700}
+.nd-board--givers .nd-row-count{color:#5F8752}
+.nd-board--dorms .nd-row-count{color:#7B2A31}
+.nd-row-unit{font-size:10px;color:#785028}

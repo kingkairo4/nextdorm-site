@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+
+# Source/reference material — not part of the deployed site
+/Media/
+/design_handoff_flowers/
+/design_handoff_circlespaces_brand/
+/nextdorm_live_handoff/
+/circlespaces_logo_update/
+/circlespaces_logos/
+
+# Unrelated project living in this same folder — do not deploy
+/brokepop/
+
+# Duplicate staging copy made for the manual drag-and-drop upload — not
+# needed now that deploys go through the Git repo at the project root
+/Netifly Folder/
+
+# Local dev tooling — not part of the deployed site
+/serve.py
+/tools/

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Surplus — Coming Soon | CircleSpaces</title>
+<meta name="description" content="Surplus is CircleSpaces' next project, redirecting surplus goods and resources back into the communities that need them. Coming soon.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/brand/logo-icon.svg">
+<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <nav class="nav container" aria-label="Primary">
+    <a href="/" class="nav-brand">
+      <img class="brand-mark" src="/assets/brand/logo-icon.svg" alt="" width="38" height="38">
+      CircleSpaces
+    </a>
+
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/nextdorm/">NextDorm</a>
+      <a href="/surplus/" aria-current="page">Surplus <span class="nav-badge">Soon</span></a>
+      <a href="/about/">About Us</a>
+    </div>
+
+    <div class="nav-actions">
+      <div class="search-wrap">
+        <button class="icon-btn" data-search-toggle aria-haspopup="true" aria-label="Search the site">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.8"/><path d="M21 21L17 17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+        <div class="search-panel" data-search-panel data-open="false" role="dialog" aria-label="Site search">
+          <label class="visually-hidden" for="search-input">Search CircleSpaces</label>
+          <input type="search" id="search-input" placeholder="Search pages, mission, projects…">
+          <ul class="search-results" data-search-results></ul>
+        </div>
+      </div>
+      <a href="/nextdorm/" class="btn btn-primary btn-sm nav-cta">Explore NextDorm</a>
+      <button class="icon-btn nav-toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 6H21M3 12H21M3 18H21" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobile-menu" data-mobile-menu data-open="false">
+  <div class="mobile-menu-top">
+    <button class="icon-btn" data-mobile-close aria-label="Close menu">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 6L18 18M6 18L18 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <nav aria-label="Mobile">
+    <a href="/">Home</a>
+    <a href="/nextdorm/">NextDorm</a>
+    <a href="/surplus/">Surplus <span class="nav-badge">Soon</span></a>
+    <a href="/about/">About Us</a>
+  </nav>
+  <a href="/nextdorm/" class="btn btn-primary">Explore NextDorm</a>
+</div>
+
+<main id="main">
+
+  <section class="coming-soon-hero container" style="position:relative;">
+    <div class="blob" style="width:380px;height:380px;background:var(--mist);top:-40px;left:50%;transform:translateX(-50%);opacity:0.8;z-index:0;"></div>
+
+    <div style="position:relative;z-index:1;">
+      <span class="coming-soon-badge reveal is-visible">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="white" stroke-width="2"/><path d="M12 7V12L15 14" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Coming soon
+      </span>
+      <h1 class="reveal is-visible" style="font-size:clamp(2.4rem,6vw,4rem);">Surplus</h1>
+      <p class="reveal is-visible" style="margin-top:18px;font-size:1.15rem;color:var(--ink-soft);max-width:560px;margin-inline:auto;">
+        Our next project, built to redirect surplus goods, materials, and resources back into the communities that need them most. Details are still taking shape — but the mission's the same: nothing good should go to waste.
+      </p>
+
+      <form class="cta-form reveal is-visible" data-newsletter-form name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="margin-top:36px;">
+        <input type="hidden" name="form-name" value="waitlist">
+        <input type="hidden" name="source" value="surplus-page">
+        <p class="visually-hidden"><label>Don't fill this out if you're human: <input name="bot-field"></label></p>
+        <label class="visually-hidden" for="surplus-email">Email address</label>
+        <input type="email" id="surplus-email" name="email" placeholder="you@brown.edu" required>
+        <button type="submit" class="btn btn-primary">Notify me</button>
+      </form>
+      <p class="form-success text-center" data-newsletter-success>You're on the list — we'll let you know the moment Surplus is ready!</p>
+      <p class="form-error text-center" data-newsletter-error>Something went wrong — please try again in a moment.</p>
+      <p class="form-note reveal is-visible">We'll only email you when Surplus is ready to explore.</p>
+
+      <div class="reveal" style="margin-top:56px;">
+        <a href="/nextdorm/" class="btn btn-outline">Explore NextDorm instead →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-pad" style="background:var(--mist-soft);">
+    <div class="container">
+      <div class="two-col">
+        <div class="reveal">
+          <span class="eyebrow" style="background:#F0DEDC;color:var(--maroon);">What to expect</span>
+          <h2 style="margin-top:16px;font-size:clamp(1.8rem,3.5vw,2.3rem);">Surplus, in a few words.</h2>
+          <p style="margin-top:18px;color:var(--ink-soft);font-size:1.05rem;">
+            Every community generates more than it can use — extra furniture, unsold inventory, unused space. Surplus will give that excess somewhere useful to go, extending CircleSpaces' mission of regenerative redistribution beyond the dorm room.
+          </p>
+          <p style="margin-top:14px;color:var(--ink-soft);font-size:1.05rem;">
+            Want a say in how it's built? Join the waitlist above and we'll reach out as we shape the project.
+          </p>
+        </div>
+        <img class="reveal" src="/assets/images/collage-fleamarket.jpg" alt="A flea-market style stall of secondhand goods being resold outdoors" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <img src="/assets/brand/logo-icon.svg" alt="" width="32" height="32">
+          CircleSpaces
+        </div>
+        <p class="footer-tagline">Sustainable, regenerative redistribution of goods, services, and wealth.</p>
+        <div class="footer-social" style="margin-top:20px;">
+          <a href="#" aria-label="CircleSpaces on Instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor"/></svg></a>
+          <a href="mailto:kairo@circlespacespbc.com" aria-label="Email CircleSpaces"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" stroke-width="1.8"/><path d="M4 7L12 13L20 7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Projects</h4>
+        <ul>
+          <li><a href="/nextdorm/">NextDorm</a></li>
+          <li><a href="/surplus/">Surplus (soon)</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/about/">About Us</a></li>
+          <li><a href="/about/#mission">Our mission</a></li>
+          <li><a href="/about/#pbc">Why a PBC?</a></li>
+          <li><a href="/about/#team">Meet the team</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="mailto:kairo@circlespacespbc.com">kairo@circlespacespbc.com</a></li>
+          <li><a href="tel:+14017156967">(401) 715-6967</a></li>
+          <li>700 Narragansett Park Dr<br>Ste 100<br>Pawtucket, RI 02861</li>
+          <li><a href="/#join">Join our newsletter</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 CircleSpaces, PBC. Built with care at Brown University.</span>
+      <span>Sustainability · Equity · Community</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+</body>
+</html>
