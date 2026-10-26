@@ -983,6 +983,27 @@ section {
   display: block;
 }
 
+/* ===================== NextDorm page hero grid ===================== */
+
+.nd-hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+}
+@media (max-width: 760px) {
+  .nd-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .nd-hero-art img:first-child {
+    max-width: 440px;
+    margin: 0 auto;
+  }
+  .nd-hero-art img:last-child {
+    width: 85% !important;
+  }
+}
+
 /* ===================== Page hero (sub-pages) ===================== */
 
 .page-hero {

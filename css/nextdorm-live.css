@@ -29,6 +29,9 @@
 .nd-logo-btn:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 40px 70px -30px rgba(43,19,22,.6)}
 .nd-logo-btn:active{transform:scale(.98)}
 .nd-logo-btn img{display:block;width:100%;height:auto}
+@media (max-width:640px){
+  .nd-live-stage .nd-logo-btn{width:min(44%,160px)}
+}
 
 /* Right column — camera phone pinned top, feed phone pinned bottom (level with logo bottom) */
 .nd-phones-col{position:relative;display:flex;justify-content:center;min-width:0;align-self:start;overflow:hidden}
